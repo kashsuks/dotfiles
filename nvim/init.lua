@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("plugins.init")
 vim.wo.relativenumber = true
 
 vim.api.nvim_create_autocmd("VimEnter", {
@@ -20,3 +19,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+vim.g.lazyvim_check_order = false 
+
+require("plugins.init")
+
+require("notify").setup({
+  background_colour = "#000000"
+})

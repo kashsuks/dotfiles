@@ -1,0 +1,2 @@
+# dotfiles
+Mac Rice dotfiles

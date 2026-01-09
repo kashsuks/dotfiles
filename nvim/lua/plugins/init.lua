@@ -23,6 +23,38 @@ return {
     "wakatime/vim-wakatime", 
     lazy = false 
   },
+{
+  "kashsuks/blueberry.nvim",
+  lazy = false,
+  priority = 1000, -- Load after NvChad
+  opts = {
+    theme = "dark",
+    transparent = true,
+  },
+  config = function(_, opts)
+    require("blueberry").setup(opts)
+    -- Force apply after NvChad loads
+    vim.schedule(function()
+      vim.cmd("colorscheme blueberry")
+    end)
+  end,
+  keys = {
+    { "<leader>tt", "<cmd>BlueberryToggle<cr>", desc = "Toggle Blueberry theme" },
+  },
+},
+
+  {
+    'nvim-telescope/telescope.nvim', tag = '*',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        -- optional but recommended
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
+    config = function()
+      vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+      require('telescope.builtin').find_files()
+    end
+  }
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },

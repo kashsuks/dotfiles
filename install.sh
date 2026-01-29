@@ -75,7 +75,6 @@ link_dir_to_config() {
 
   mkdir -p "$HOME/.config"
 
-  # If already correctly linked, skip
   if [[ -L "$dst" ]]; then
     local cur
     cur="$(readlink "$dst" || true)"
@@ -94,15 +93,12 @@ install_packages() {
   info "Installing core packages for your setup (yabai/skhd/sketchybar/kitty/nvim/spicetify)..."
   brew update
 
-  # CLI/core
   brew install neovim
 
-  # Window manager + hotkeys + bar
   brew install koekeishiya/formulae/yabai
   brew install koekeishiya/formulae/skhd
   brew install sketchybar
 
-  # Terminal + spotify theming helper
   brew install --cask kitty
   brew install spicetify-cli || brew install spicetify
 
@@ -141,7 +137,6 @@ main() {
 
   ensure_homebrew
 
-  # Ensure brew is usable in this shell
   if ! have brew; then
     if [[ -x /opt/homebrew/bin/brew ]]; then
       eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -170,4 +165,3 @@ main() {
 }
 
 main "$@"
-

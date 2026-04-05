@@ -1,44 +1,31 @@
 #!/bin/bash
 
-export WHITE=0xffffffff
+# Catppuccin Macchiato Theme
+# Primary: Blue (#8AADF4)
+# Secondary/Subtle: Mauve/Purple (#C6A0F6)
 
-# -- Teal Scheme --
-# export BAR_COLOR=0xff001f30
-# export ITEM_BG_COLOR=0xff003547
-# export ACCENT_COLOR=0xff2cf9ed
+export WHITE=0xffCAD3F5
 
-# -- Gray Scheme --
-# export BAR_COLOR=0xff101314
-# export ITEM_BG_COLOR=0xff353c3f
-# export ACCENT_COLOR=0xffffffff
+# Catppuccin Macchiato colors
+export BASE=0xff24273A         # Main background
+export MANTLE=0xff1E2030       # Darker background
+export SURFACE0=0xff363A4F     # Surface
+export SURFACE1=0xff494D64     # Surface elevated
+export SURFACE2=0xff5B5F73    # Surface more elevated
+export OVERLAY0=0xff6E738D     # Overlay
+export TEXT=0xffCAD3F5         # Primary text
+export SUBTEXT0=0xffA6ADC8     # Secondary text
+export BLUE=0xff8AADF4         # Primary accent (blue)
+export MAUVE=0xffC6A0F6        # Secondary accent (purple - subtle)
+export GREEN=0xffA6DA95        # Green
+export YELLOW=0xffF5A97F       # Yellow/peach
+export RED=0xffED8796          # Red
+export TEAL=0xff91D7E3         # Teal
+export PINK=0xffF5BDE6         # Pink
+export LAVENDER=0xffB7BDF8     # Lavender
 
-# -- Purple Scheme --
-# export BAR_COLOR=0xff140c42
-# export ITEM_BG_COLOR=0xff2b1c84
-# export ACCENT_COLOR=0xffeb46f9
-
-# -- Red Scheme ---
-# export BAR_COLOR=0xff23090e
-# export ITEM_BG_COLOR=0xff591221
-# export ACCENT_COLOR=0xffff2453
-
-# -- Blue Scheme --- 
-export BAR_COLOR=0xff021254
-export ITEM_BG_COLOR=0xff093aa8
-export ACCENT_COLOR=0xff15bdf9
-
-# -- Green Scheme --
-# export BAR_COLOR=0xff003315
-# export ITEM_BG_COLOR=0xff008c39
-# export ACCENT_COLOR=0xff1dfca1
-
-
-# -- Orange Scheme --
-# export BAR_COLOR=0xff381c02
-# export ITEM_BG_COLOR=0xff99440a
-# export ACCENT_COLOR=0xfff97716
-
-# -- Yellow Scheme --
-# export BAR_COLOR=0xff2d2b02
-# export ITEM_BG_COLOR=0xff8e7e0a
-# export ACCENT_COLOR=0xfff7fc17
+# Theme assignments
+export BAR_COLOR=$BASE
+export ITEM_BG_COLOR=$SURFACE1
+export ACCENT_COLOR=$BLUE
+export SECONDARY_COLOR=$MAUVE
